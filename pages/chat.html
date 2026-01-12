@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Chat - MindWell</title>
+    <link rel="icon" type="image/png" href="../assets/favlogo.png">
+    <link rel="shortcut icon" href="../assets/favlogo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
@@ -14,7 +16,9 @@
     <div class="hidden md:flex w-[280px] bg-white border-r border-gray-200 flex-col h-full flex-shrink-0">
 
         <div class="p-6 border-b border-gray-100 flex items-center gap-3 font-bold text-teal-800 text-xl">
-            <img src="../assets/logo.png" class="w-8 opacity-50 hover:opacity-100 transition-opacity duration-300 cursor-pointer click-fade" onerror="this.src='https://placehold.co/30/teal/white?text=M'">
+            <img src="../assets/logo.png"
+                class="w-8 opacity-50 hover:opacity-100 transition-opacity duration-300 cursor-pointer click-fade"
+                onerror="this.src='https://placehold.co/30/teal/white?text=M'">
             MindWell
         </div>
 
@@ -87,7 +91,8 @@
         <div
             class="md:hidden w-full flex justify-between items-center p-4 bg-white border-b border-gray-100 shrink-0 z-20 shadow-sm">
             <div class="flex items-center gap-2 font-bold text-teal-800 text-lg">
-                <img src="../assets/logo.png" class="w-7 opacity-50 hover:opacity-100 transition-opacity duration-300 cursor-pointer click-fade"
+                <img src="../assets/logo.png"
+                    class="w-7 opacity-50 hover:opacity-100 transition-opacity duration-300 cursor-pointer click-fade"
                     onerror="this.src='https://placehold.co/30/teal/white?text=M'"> MindWell
             </div>
             <a href="../index.html"
@@ -113,12 +118,14 @@
             </div>
         </div>
 
-        <div class="flex-1 p-4 md:p-8 space-y-4 md:space-y-6 overflow-y-auto w-full pb-48 md:pb-24" id="chat-container">
+        <div class="flex-1 p-4 md:p-8 space-y-4 md:space-y-6 overflow-y-auto w-full pb-80 md:pb-40" id="chat-container">
 
             <div class="flex items-start gap-3 md:gap-4">
                 <div
                     class="w-8 h-8 md:w-10 md:h-10 bg-white border border-gray-200 rounded-full p-1.5 md:p-2 flex items-center justify-center overflow-hidden flex-shrink-0">
-                    <img src="../assets/logo.png" class="w-full h-full object-contain opacity-50 hover:opacity-100 transition-opacity duration-300 cursor-pointer click-fade" onerror="this.src='https://placehold.co/30/teal/white?text=AI'">
+                    <img src="../assets/logo.png"
+                        class="w-full h-full object-contain opacity-50 hover:opacity-100 transition-opacity duration-300 cursor-pointer click-fade"
+                        onerror="this.src='https://placehold.co/30/teal/white?text=AI'">
                 </div>
                 <div
                     class="bg-white p-4 md:p-5 rounded-2xl rounded-tl-none shadow-sm text-gray-700 leading-relaxed max-w-[85%] md:max-w-2xl border border-gray-100 text-sm md:text-base">
@@ -140,7 +147,9 @@
             <div class="flex items-start gap-3 md:gap-4">
                 <div
                     class="w-8 h-8 md:w-10 md:h-10 bg-white border border-gray-200 rounded-full p-1.5 md:p-2 flex items-center justify-center overflow-hidden flex-shrink-0">
-                    <img src="../assets/logo.png" class="w-full h-full object-contain opacity-50 hover:opacity-100 transition-opacity duration-300 cursor-pointer click-fade" onerror="this.src='https://placehold.co/30/teal/white?text=AI'">
+                    <img src="../assets/logo.png"
+                        class="w-full h-full object-contain opacity-50 hover:opacity-100 transition-opacity duration-300 cursor-pointer click-fade"
+                        onerror="this.src='https://placehold.co/30/teal/white?text=AI'">
                 </div>
                 <div
                     class="bg-white p-4 md:p-5 rounded-2xl rounded-tl-none shadow-sm text-gray-700 leading-relaxed max-w-[85%] md:max-w-2xl border border-gray-100 text-sm md:text-base">
@@ -153,10 +162,11 @@
         <div
             class="absolute bottom-[80px] md:bottom-0 left-0 w-full bg-white md:border-t border-gray-200 p-3 md:p-6 z-20">
             <div
-                class="max-w-4xl mx-auto flex bg-gray-50 border border-gray-200 rounded-2xl p-1 md:p-2 focus-within:border-teal-500 focus-within:ring-2 focus-within:ring-teal-50 transition shadow-sm md:shadow-none">
-                <input class="flex-1 bg-transparent outline-none px-3 md:px-4 text-gray-700 text-sm md:text-base"
+                class="max-w-4xl mx-auto flex items-center bg-gray-50 border border-gray-200 rounded-2xl p-1 md:p-2 focus-within:border-teal-500 focus-within:ring-2 focus-within:ring-teal-50 transition shadow-sm md:shadow-none">
+                <input id="chat-input"
+                    class="flex-1 bg-transparent border-none outline-none focus:outline-none focus:ring-0 px-3 md:px-4 text-gray-700 text-sm md:text-base w-full placeholder-gray-400"
                     placeholder="Type your message here...">
-                <button
+                <button id="chat-send-btn"
                     class="bg-teal-600 text-white font-bold px-4 md:px-8 py-2 md:py-3 rounded-xl hover:bg-teal-700 transition shadow-sm text-sm md:text-base whitespace-nowrap">
                     Send
                 </button>
@@ -202,6 +212,25 @@
     <script src="../js/auth.js"></script>
     <script src="../js/ui.js"></script>
     <script src="../js/chat.js"></script>
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-2xl p-6 w-96 shadow-2xl transform transition-all scale-100">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Chat Settings</h3>
+            <p class="text-sm text-gray-500 mb-4">Enter your Google Gemini API Key to enable the AI therapist.</p>
+            <input id="api-key-input" type="password" placeholder="Enter API Key here..."
+                class="w-full border border-gray-300 rounded-lg p-3 mb-4 focus:border-teal-500 outline-none">
+            <div class="flex justify-end gap-2">
+                <button id="close-settings-btn"
+                    class="text-gray-500 hover:text-gray-700 font-bold py-2 px-4 rounded-lg">Cancel</button>
+                <button id="save-api-key-btn"
+                    class="bg-teal-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-teal-700 transition">Save</button>
+            </div>
+            <p class="text-xs text-gray-400 mt-4 text-center">Get a free key at <a
+                    href="https://aistudio.google.com/app/apikey" target="_blank"
+                    class="text-teal-600 hover:underline">Google AI Studio</a></p>
+        </div>
+    </div>
+
 </body>
 
 </html>

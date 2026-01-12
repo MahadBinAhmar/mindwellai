@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Find Therapists - MindWell</title>
+    <link rel="icon" type="image/png" href="../assets/favlogo.png">
+    <link rel="shortcut icon" href="../assets/favlogo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../styles/styles.css" />
 </head>
@@ -44,7 +46,7 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-40">
 
                 <div
                     class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-200 hover:shadow-xl transition text-center hover:-translate-y-2 cursor-pointer group">
@@ -287,6 +289,35 @@
             </div>
         </div>
     </div>
+    <div
+        class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 flex justify-around items-center p-3 z-50 pb-5 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+        <a href="dashboard.html" class="flex flex-col items-center gap-1 text-gray-400 hover:text-teal-600 transition">
+            <div class="w-6 h-6">
+                <img src="../assets/dashboard.png" class="w-full h-full object-contain opacity-60" alt="Home">
+            </div>
+            <span class="text-[10px] font-medium">Home</span>
+        </a>
+        <a href="chat.html" class="flex flex-col items-center gap-1 text-gray-400 hover:text-teal-600 transition">
+            <div class="w-6 h-6">
+                <img src="../assets/voice.png" class="w-full h-full object-contain opacity-60" alt="Chat">
+            </div>
+            <span class="text-[10px] font-medium">AI Chat</span>
+        </a>
+        <a href="therapists.html" class="flex flex-col items-center gap-1 text-teal-700">
+            <div class="w-6 h-6">
+                <img src="../assets/doctor.png" class="w-full h-full object-contain" alt="Doctor">
+            </div>
+            <span class="text-[10px] font-bold">Therapists</span>
+        </a>
+        <a href="profile-setup.html"
+            class="flex flex-col items-center gap-1 text-gray-400 hover:text-teal-600 transition">
+            <div class="w-6 h-6">
+                <img src="../assets/setting.png" class="w-full h-full object-contain opacity-60" alt="Settings">
+            </div>
+            <span class="text-[10px] font-medium">Settings</span>
+        </a>
+    </div>
+
     <script src="../js/auth.js"></script>
     <script src="../js/ui.js"></script>
     <script src="../js/therapists.js"></script>
