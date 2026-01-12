@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Therapists - MindWell</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/styles.css" />
+</head>
+
+<body class="bg-gray-50 h-screen w-full overflow-hidden font-sans">
+
+    <div class="h-full w-full overflow-y-auto">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 py-10">
+
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
+
+                <a href="dashboard.html"
+                    class="group flex w-fit items-center gap-2 border border-gray-200 text-gray-500 font-bold px-4 py-2 rounded-xl hover:border-teal-500 hover:text-teal-600 hover:bg-teal-50 transition shadow-sm bg-white text-md">
+                    <span
+                        class="transition-transform w-8 h-8 flex items-center justify-center rounded-full overflow-hidden border border-gray-100">
+                        <img src="../assets/dashboard.png" alt="dashboard" class="w-full h-full object-cover">
+                    </span>
+                    <span>Dashboard</span>
+                </a>
+
+                <div class="flex gap-3 w-full md:w-auto">
+                    <input id="search-input" placeholder="Search by name or specialty..."
+                        class="border border-gray-200 bg-white rounded-xl px-5 py-3 text-sm outline-none focus:border-teal-500 w-full md:w-80 transition shadow-sm" />
+                    <button id="search-btn"
+                        class="bg-teal-600 text-white px-8 py-3 rounded-xl text-sm font-bold hover:bg-teal-700 transition shadow-md">
+                        Search
+                    </button>
+                </div>
+            </div>
+
+            <div class="mb-10 text-center md:text-left">
+                <h1 class="font-bold text-gray-900 text-3xl md:text-4xl mb-2">
+                    Therapists Directory
+                </h1>
+                <p class="text-gray-500 text-lg">
+                    Find the best professional for your mental health journey.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-10">
+
+                <div
+                    class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-200 hover:shadow-xl transition text-center hover:-translate-y-2 cursor-pointer group">
+                    <div
+                        class="w-32 h-32 bg-gray-100 rounded-full mx-auto mb-6 overflow-hidden border-4 border-teal-50 group-hover:border-teal-100 transition">
+                        <img src="../assets/6.png" class="w-full h-full object-cover" alt="Dr. Ayesha Khan" />
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-2xl mb-1">Dr. Ayesha Khan</h3>
+                    <p class="text-xs font-bold text-teal-600 uppercase mb-4 tracking-widest">
+                        Clinical Psychologist
+                    </p>
+                    <p class="text-gray-500 mb-8 px-4 leading-relaxed h-12 overflow-hidden text-sm">
+                        Specializes in anxiety, depression, and trauma therapy using CBT.
+                    </p>
+                    <p class="text-teal-800 font-bold mb-4">Rs. 2500 <span class="text-gray-400 font-normal text-xs">/
+                            session</span></p>
+                    <div class="flex justify-center items-center gap-2 text-yellow-400 text-lg mb-8">
+                        ★★★★★
+                        <span class="text-gray-400 text-sm font-medium">(215 Reviews)</span>
+                    </div>
+                    <a href="booking.html"
+                        class="block w-full border-2 border-teal-600 text-teal-600 font-bold py-4 rounded-2xl hover:bg-teal-600 hover:text-white transition text-lg">
+                        Book Session
+                    </a>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-200 hover:shadow-xl transition text-center hover:-translate-y-2 cursor-pointer group">
+                    <div
+                        class="w-32 h-32 bg-gray-100 rounded-full mx-auto mb-6 overflow-hidden border-4 border-teal-50 group-hover:border-teal-100 transition">
+                        <img src="../assets/3.png" class="w-full h-full object-cover" alt="Dr. Bilal Ahmed" />
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-2xl mb-1">Dr. Bilal Ahmed</h3>
+                    <p class="text-xs font-bold text-teal-600 uppercase mb-4 tracking-widest">
+                        Child Therapist
+                    </p>
+                    <p class="text-gray-500 mb-8 px-4 leading-relaxed h-12 overflow-hidden text-sm">
+                        Expert in behavioral issues, ADHD, and family counseling for youth.
+                    </p>
+                    <p class="text-teal-800 font-bold mb-4">Rs. 2000 <span class="text-gray-400 font-normal text-xs">/
+                            session</span></p>
+                    <div class="flex justify-center items-center gap-2 text-yellow-400 text-lg mb-8">
+                        ★★★★☆
+                        <span class="text-gray-400 text-sm font-medium">(142 Reviews)</span>
+                    </div>
+                    <a href="booking.html"
+                        class="block w-full border-2 border-teal-600 text-teal-600 font-bold py-4 rounded-2xl hover:bg-teal-600 hover:text-white transition text-lg">
+                        Book Session
+                    </a>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-200 hover:shadow-xl transition text-center hover:-translate-y-2 cursor-pointer group">
+                    <div
+                        class="w-32 h-32 bg-gray-100 rounded-full mx-auto mb-6 overflow-hidden border-4 border-teal-50 group-hover:border-teal-100 transition">
+                        <img src="../assets/5.png" class="w-full h-full object-cover" alt="Dr. Fatima Tariq" />
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-2xl mb-1">
+                        Dr. Fatima Tariq
+                    </h3>
+                    <p class="text-xs font-bold text-teal-600 uppercase mb-4 tracking-widest">
+                        Psychiatrist
+                    </p>
+                    <p class="text-gray-500 mb-8 px-4 leading-relaxed h-12 overflow-hidden text-sm">
+                        Medical doctor specialized in diagnosing complex mental health conditions.
+                    </p>
+                    <p class="text-teal-800 font-bold mb-4">Rs. 3000 <span class="text-gray-400 font-normal text-xs">/
+                            session</span></p>
+                    <div class="flex justify-center items-center gap-2 text-yellow-400 text-lg mb-8">
+                        ★★★★★
+                        <span class="text-gray-400 text-sm font-medium">(320 Reviews)</span>
+                    </div>
+                    <a href="booking.html"
+                        class="block w-full border-2 border-teal-600 text-teal-600 font-bold py-4 rounded-2xl hover:bg-teal-600 hover:text-white transition text-lg">
+                        Book Session
+                    </a>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-200 hover:shadow-xl transition text-center hover:-translate-y-2 cursor-pointer group">
+                    <div
+                        class="w-32 h-32 bg-gray-100 rounded-full mx-auto mb-6 overflow-hidden border-4 border-teal-50 group-hover:border-teal-100 transition">
+                        <img src="../assets/2.png" class="w-full h-full object-cover" alt="Dr. Omar Hassan" />
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-2xl mb-1">Dr. Omar Hassan</h3>
+                    <p class="text-xs font-bold text-teal-600 uppercase mb-4 tracking-widest">
+                        Couples Counselor
+                    </p>
+                    <p class="text-gray-500 mb-8 px-4 leading-relaxed h-12 overflow-hidden text-sm">
+                        Helps couples navigate relationship challenges and conflict resolution.
+                    </p>
+                    <p class="text-teal-800 font-bold mb-4">Rs. 2800 <span class="text-gray-400 font-normal text-xs">/
+                            session</span></p>
+                    <div class="flex justify-center items-center gap-2 text-yellow-400 text-lg mb-8">
+                        ★★★★☆
+                        <span class="text-gray-400 text-sm font-medium">(88 Reviews)</span>
+                    </div>
+                    <a href="booking.html"
+                        class="block w-full border-2 border-teal-600 text-teal-600 font-bold py-4 rounded-2xl hover:bg-teal-600 hover:text-white transition text-lg">
+                        Book Session
+                    </a>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-200 hover:shadow-xl transition text-center hover:-translate-y-2 cursor-pointer group">
+                    <div
+                        class="w-32 h-32 bg-gray-100 rounded-full mx-auto mb-6 overflow-hidden border-4 border-teal-50 group-hover:border-teal-100 transition">
+                        <img src="../assets/4.png" class="w-full h-full object-cover" alt="Dr. Zainab Malik" />
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-2xl mb-1">
+                        Dr. Zainab Malik
+                    </h3>
+                    <p class="text-xs font-bold text-teal-600 uppercase mb-4 tracking-widest">
+                        Trauma Specialist
+                    </p>
+                    <p class="text-gray-500 mb-8 px-4 leading-relaxed h-12 overflow-hidden text-sm">
+                        Certified EMDR therapist focused on healing PTSD and past trauma.
+                    </p>
+                    <p class="text-teal-800 font-bold mb-4">Rs. 2200 <span class="text-gray-400 font-normal text-xs">/
+                            session</span></p>
+                    <div class="flex justify-center items-center gap-2 text-yellow-400 text-lg mb-8">
+                        ★★★★★
+                        <span class="text-gray-400 text-sm font-medium">(175 Reviews)</span>
+                    </div>
+                    <a href="booking.html"
+                        class="block w-full border-2 border-teal-600 text-teal-600 font-bold py-4 rounded-2xl hover:bg-teal-600 hover:text-white transition text-lg">
+                        Book Session
+                    </a>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-200 hover:shadow-xl transition text-center hover:-translate-y-2 cursor-pointer group">
+                    <div
+                        class="w-32 h-32 bg-gray-100 rounded-full mx-auto mb-6 overflow-hidden border-4 border-teal-50 group-hover:border-teal-100 transition">
+                        <img src="../assets/1.png" class="w-full h-full object-cover" alt="Dr. Saad Rafique" />
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-2xl mb-1">
+                        Dr. Saad Rafique
+                    </h3>
+                    <p class="text-xs font-bold text-teal-600 uppercase mb-4 tracking-widest">
+                        Addiction Psychiatrist
+                    </p>
+                    <p class="text-gray-500 mb-8 px-4 leading-relaxed h-12 overflow-hidden text-sm">
+                        Dedicated to helping individuals overcome substance abuse issues.
+                    </p>
+                    <p class="text-teal-800 font-bold mb-4">Rs. 2600 <span class="text-gray-400 font-normal text-xs">/
+                            session</span></p>
+                    <div class="flex justify-center items-center gap-2 text-yellow-400 text-lg mb-8">
+                        ★★★★☆
+                        <span class="text-gray-400 text-sm font-medium">(64 Reviews)</span>
+                    </div>
+                    <a href="booking.html"
+                        class="block w-full border-2 border-teal-600 text-teal-600 font-bold py-4 rounded-2xl hover:bg-teal-600 hover:text-white transition text-lg">
+                        Book Session
+                    </a>
+                </div>
+
+                <!-- New Pakistani Therapists -->
+                <div
+                    class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-200 hover:shadow-xl transition text-center hover:-translate-y-2 cursor-pointer group">
+                    <div
+                        class="w-32 h-32 bg-gray-100 rounded-full mx-auto mb-6 overflow-hidden border-4 border-teal-50 group-hover:border-teal-100 transition">
+                        <img src="../assets/7.png" class="w-full h-full object-cover" alt="Dr. Hamza Ali" />
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-2xl mb-1">
+                        Dr. Hamza Ali
+                    </h3>
+                    <p class="text-xs font-bold text-teal-600 uppercase mb-4 tracking-widest">
+                        Clinical Psychologist
+                    </p>
+                    <p class="text-gray-500 mb-8 px-4 leading-relaxed h-12 overflow-hidden text-sm">
+                        Expert in CBT and mindfulness-based stress reduction for adults.
+                    </p>
+                    <p class="text-teal-800 font-bold mb-4">Rs. 2400 <span class="text-gray-400 font-normal text-xs">/
+                            session</span></p>
+                    <div class="flex justify-center items-center gap-2 text-yellow-400 text-lg mb-8">
+                        ★★★★★
+                        <span class="text-gray-400 text-sm font-medium">(45 Reviews)</span>
+                    </div>
+                    <a href="booking.html"
+                        class="block w-full border-2 border-teal-600 text-teal-600 font-bold py-4 rounded-2xl hover:bg-teal-600 hover:text-white transition text-lg">
+                        Book Session
+                    </a>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-200 hover:shadow-xl transition text-center hover:-translate-y-2 cursor-pointer group">
+                    <div
+                        class="w-32 h-32 bg-gray-100 rounded-full mx-auto mb-6 overflow-hidden border-4 border-teal-50 group-hover:border-teal-100 transition">
+                        <img src="../assets/8.png" class="w-full h-full object-cover" alt="Dr. Sana Mir" />
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-2xl mb-1">
+                        Dr. Sana Mir
+                    </h3>
+                    <p class="text-xs font-bold text-teal-600 uppercase mb-4 tracking-widest">
+                        Child Specialist
+                    </p>
+                    <p class="text-gray-500 mb-8 px-4 leading-relaxed h-12 overflow-hidden text-sm">
+                        Focuses on developmental disorders and school-related anxiety.
+                    </p>
+                    <p class="text-teal-800 font-bold mb-4">Rs. 2100 <span class="text-gray-400 font-normal text-xs">/
+                            session</span></p>
+                    <div class="flex justify-center items-center gap-2 text-yellow-400 text-lg mb-8">
+                        ★★★★☆
+                        <span class="text-gray-400 text-sm font-medium">(90 Reviews)</span>
+                    </div>
+                    <a href="booking.html"
+                        class="block w-full border-2 border-teal-600 text-teal-600 font-bold py-4 rounded-2xl hover:bg-teal-600 hover:text-white transition text-lg">
+                        Book Session
+                    </a>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-200 hover:shadow-xl transition text-center hover:-translate-y-2 cursor-pointer group">
+                    <div
+                        class="w-32 h-32 bg-gray-100 rounded-full mx-auto mb-6 overflow-hidden border-4 border-teal-50 group-hover:border-teal-100 transition">
+                        <img src="../assets/9.png" class="w-full h-full object-cover" alt="Dr. Taimur Khan" />
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-2xl mb-1">
+                        Dr. Taimur Khan
+                    </h3>
+                    <p class="text-xs font-bold text-teal-600 uppercase mb-4 tracking-widest">
+                        Psychiatrist
+                    </p>
+                    <p class="text-gray-500 mb-8 px-4 leading-relaxed h-12 overflow-hidden text-sm">
+                        Specializes in mood disorders and medication management.
+                    </p>
+                    <p class="text-teal-800 font-bold mb-4">Rs. 3200 <span class="text-gray-400 font-normal text-xs">/
+                            session</span></p>
+                    <div class="flex justify-center items-center gap-2 text-yellow-400 text-lg mb-8">
+                        ★★★★★
+                        <span class="text-gray-400 text-sm font-medium">(110 Reviews)</span>
+                    </div>
+                    <a href="booking.html"
+                        class="block w-full border-2 border-teal-600 text-teal-600 font-bold py-4 rounded-2xl hover:bg-teal-600 hover:text-white transition text-lg">
+                        Book Session
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../js/auth.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/therapists.js"></script>
+</body>
+
+</html>

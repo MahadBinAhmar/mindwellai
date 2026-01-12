@@ -1,0 +1,68 @@
+/* styles/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #f3f4f6; /* Light Gray Background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Scrollbar Hide Logic */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Design Consistency Utilities */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+/* --- GLOBAL SCROLLBAR STYLING --- */
+
+/* Scrollbar ki churai (width) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px; /* Horizontal scroll ke liye */
+}
+
+/* Track (Peeche ka rasta) - Lightest Teal */
+::-webkit-scrollbar-track {
+    background: #f0fdfa; /* Teal-50 */
+}
+
+/* Thumb (Jo pakad ke khinchte hain) - Soft Teal */
+::-webkit-scrollbar-thumb {
+    background: #99f6e4; /* Teal-200 */
+    border-radius: 10px;
+}
+
+/* Hover (Mouse upar le jane par) - Darker Teal */
+::-webkit-scrollbar-thumb:hover {
+    background: #0d9488; /* Teal-600 */
+}
+
+/* --- Accessibility: Focus Styles --- */
+:focus {
+    outline: none;
+}
+
+:focus-visible, .focus-visible {
+    outline: 3px solid rgba(13,148,136,0.18);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(13,148,136,0.06);
+}
+
+/* Screen-reader only helper */
+.sr-only {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}

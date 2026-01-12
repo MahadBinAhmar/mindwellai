@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Setup - MindWell</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body class="h-screen w-full bg-gray-50 overflow-hidden flex font-sans">
+
+    <div class="hidden md:flex w-[280px] bg-white border-r border-gray-200 flex-col h-full flex-shrink-0">
+
+        <div class="p-6 border-b border-gray-100 flex items-center gap-3 font-bold text-teal-800 text-xl">
+            <img src="../assets/logo.png" class="w-8" onerror="this.src='https://placehold.co/30/teal/white?text=M'">
+            MindWell
+        </div>
+
+        <div class="p-4 space-y-2">
+            <a href="dashboard.html"
+                class="flex items-center gap-3 text-gray-600 hover:bg-gray-50 hover:text-teal-600 font-medium p-3 rounded-xl cursor-pointer transition">
+                <img src="../assets/dashboard.png"
+                    class="w-5 h-5 object-contain opacity-60 hover:opacity-100 transition" alt="Dashboard">
+                <span>Dashboard</span>
+            </a>
+            <a href="chat.html"
+                class="flex items-center gap-3 text-gray-600 hover:bg-gray-50 hover:text-teal-600 font-medium p-3 rounded-xl cursor-pointer transition">
+                <img src="../assets/voice.png" class="w-5 h-5 object-contain opacity-60 hover:opacity-100 transition"
+                    alt="Chat">
+                <span>AI Assistant</span>
+            </a>
+            <a href="therapists.html"
+                class="flex items-center gap-3 text-gray-600 hover:bg-gray-50 hover:text-teal-600 font-medium p-3 rounded-xl cursor-pointer transition">
+                <img src="../assets/doctor.png" class="w-5 h-5 object-contain opacity-60 hover:opacity-100 transition"
+                    alt="Therapists">
+                <span>Find Therapists</span>
+            </a>
+            <a href="profile-setup.html"
+                class="flex items-center gap-3 bg-teal-50 text-teal-800 font-bold p-3 rounded-xl cursor-pointer border border-teal-100 transition">
+                <img src="../assets/setting.png" class="w-5 h-5 object-contain" alt="Settings">
+                <span>Settings</span>
+            </a>
+        </div>
+
+        <div class="mt-auto p-5 border-t border-gray-100 bg-gray-50/30">
+            <a href="../index.html"
+                class="mw-logout group w-full flex items-center justify-center gap-2 bg-red-50 text-red-500 border border-red-100 font-bold py-3 rounded-xl hover:bg-red-100 hover:text-red-600 hover:border-red-200 transition shadow-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:scale-110 transition-transform"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+                <span>Log Out</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="flex-1 h-full flex flex-col relative w-full overflow-hidden">
+
+        <div
+            class="md:hidden w-full flex justify-between items-center p-5 bg-white border-b border-gray-100 shrink-0 z-20 shadow-sm">
+            <div class="flex items-center gap-2 font-bold text-teal-800 text-lg">
+                <img src="../assets/logo.png" class="w-7"
+                    onerror="this.src='https://placehold.co/30/teal/white?text=M'"> MindWell
+            </div>
+            <a href="../index.html"
+                class="text-red-500 font-bold text-sm flex items-center gap-1 bg-red-50 px-3 py-2 rounded-lg hover:bg-red-100 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+                Log Out
+            </a>
+        </div>
+
+        <div class="flex-1 overflow-y-auto w-full p-4 md:p-16 pb-24 md:pb-16">
+            <div class="max-w-4xl mx-auto min-h-full flex flex-col justify-start md:justify-center pb-8">
+
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-gray-800 mt-4 md:mt-0">Personal Information</h2>
+
+                <div
+                    class="bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-gray-200 flex flex-col md:flex-row gap-8 md:gap-12">
+
+                    <div class="flex flex-col items-center min-w-[200px]">
+                        <div
+                            class="w-32 h-32 md:w-40 md:h-40 bg-gray-50 rounded-full flex items-center justify-center text-gray-400 mb-4 md:mb-6 border-2 border-dashed border-gray-300 hover:border-teal-500 transition cursor-pointer group relative overflow-hidden">
+                            <img id="profile-preview" src="../assets/profile-ali.png" alt="Profile preview"
+                                class="w-full h-full object-cover rounded-full absolute inset-0" />
+                            <span class="text-sm group-hover:text-teal-600 font-bold relative z-10">Upload Photo</span>
+                            <div class="absolute inset-0 bg-teal-50 opacity-0 group-hover:opacity-100 transition z-0">
+                            </div>
+                            <input id="profile-photo" type="file" accept="image/*"
+                                class="absolute inset-0 opacity-0 cursor-pointer z-50" />
+                        </div>
+                        <button id="remove-photo-btn"
+                            class="text-teal-600 font-bold hover:underline text-sm md:text-base">Remove Photo</button>
+                    </div>
+
+                    <div class="flex-1 space-y-5 md:space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
+                            <div>
+                                <label for="age"
+                                    class="block text-xs font-bold text-gray-500 uppercase mb-2">Age</label>
+                                <input id="age" name="age"
+                                    class="w-full p-3 md:p-4 border border-gray-200 rounded-xl bg-gray-50 focus:border-teal-500 outline-none transition"
+                                    value="25">
+                            </div>
+                            <div>
+                                <label for="gender"
+                                    class="block text-xs font-bold text-gray-500 uppercase mb-2">Gender</label>
+                                <select id="gender" name="gender"
+                                    class="w-full p-3 md:p-4 border border-gray-200 rounded-xl bg-gray-50 outline-none focus:border-teal-500 transition">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Non-binary</option>
+                                    <option>Prefer not to say</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="bio" class="block text-xs font-bold text-gray-500 uppercase mb-2">Bio / Medical
+                                History</label>
+                            <textarea id="bio" name="bio"
+                                class="w-full p-3 md:p-4 border border-gray-200 rounded-xl h-32 md:h-40 bg-gray-50 focus:border-teal-500 outline-none resize-none leading-relaxed transition"
+                                placeholder="Briefly describe your mental health history or goals..."></textarea>
+                        </div>
+
+                        <form id="profile-form"
+                            class="pt-4 flex flex-col sm:flex-row justify-center md:justify-start w-full">
+                            <div class="w-full md:w-auto">
+                                <button type="submit" id="profile-save"
+                                    class="inline-block bg-teal-600 text-white px-10 py-4 rounded-xl font-bold shadow-md hover:bg-teal-700 transition text-lg w-full md:w-auto text-center">Save
+                                    & Continue</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 flex justify-around items-center p-3 z-50 pb-5 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+        <a href="dashboard.html" class="flex flex-col items-center gap-1 text-gray-400 hover:text-teal-600 transition">
+            <div class="w-6 h-6">
+                <img src="../assets/dashboard.png" class="w-full h-full object-contain opacity-60" alt="Home">
+            </div>
+            <span class="text-[10px] font-medium">Home</span>
+        </a>
+        <a href="chat.html" class="flex flex-col items-center gap-1 text-gray-400 hover:text-teal-600 transition">
+            <div class="w-6 h-6">
+                <img src="../assets/voice.png" class="w-full h-full object-contain opacity-60" alt="Chat">
+            </div>
+            <span class="text-[10px] font-medium">AI Chat</span>
+        </a>
+        <a href="therapists.html" class="flex flex-col items-center gap-1 text-gray-400 hover:text-teal-600 transition">
+            <div class="w-6 h-6">
+                <img src="../assets/doctor.png" class="w-full h-full object-contain opacity-60" alt="Doctor">
+            </div>
+            <span class="text-[10px] font-medium">Therapists</span>
+        </a>
+        <a href="profile-setup.html" class="flex flex-col items-center gap-1 text-teal-700">
+            <div class="w-6 h-6">
+                <img src="../assets/setting.png" class="w-full h-full object-contain" alt="Settings">
+            </div>
+            <span class="text-[10px] font-bold">Settings</span>
+        </a>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/profile-setup.js"></script>
+</body>
+
+</html>
